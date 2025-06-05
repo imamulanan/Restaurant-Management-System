@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ফন্ট সেট করা */
+    background-color: #f8f9fa; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+    display: flex; /* ফ্লেক্সবক্স দিয়ে লেআউট */
+    justify-content: center; /* অনুভূমিকভাবে কেন্দ্রীকরণ */
+    align-items: center; /* উলম্বভাবে কেন্দ্রীকরণ */
+    min-height: 100vh; /* ভিউপোর্ট উচ্চতার সমান */
+    margin: 0; /* ডিফল্ট মার্জিন বাদ দেওয়া */
+    padding: 20px; /* চারপাশে প্যাডিং */
+    background-image: linear-gradient(to right, #f5f7fa, #e4e8f0); /* হালকা গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+}
+
+.form-container {
+    background-color: #fff; /* সাদা ব্যাকগ্রাউন্ড */
+    padding: 32px; /* ভিতরে বড় প্যাডিং */
+    width: 100%; /* ১০০% প্রস্থ */
+    max-width: 500px; /* সর্বোচ্চ ৫০০ পিক্সেল প্রস্থ */
+    border-radius: 10px; /* গোলাকার কোণ */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* হালকা ছায়া */
+    transition: transform 0.3s ease; /* ট্রান্সফর্ম এফেক্টের জন্য মসৃণ ট্রানজিশন */
+}
+
+.form-container:hover {
+    transform: translateY(-5px); /* মাউস ওভার হলে উপরে উঠানো */
+}
+
+h2 {
+    text-align: center; /* লেখা কেন্দ্রভাগে */
+    margin-bottom: 24px; /* নিচে ফাঁকা জায়গা */
+    color: #2c3e50; /* গাঢ় ধূসর রঙ */
+    font-weight: 600; /* একটু মোটা ফন্ট */
+}
+
+label {
+    display: block; /* ব্লক এলিমেন্ট */
+    margin-top: 16px; /* উপরে ফাঁকা জায়গা */
+    font-weight: 500; /* মাঝারি মোটা ফন্ট */
+    color: #34495e; /* গাঢ় ধূসর রঙ */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%; /* প্রস্থ ১০০% */
+    padding: 12px; /* প্যাডিং */
+    margin-top: 8px; /* উপরে সামান্য ফাঁকা জায়গা */
+    margin-bottom: 16px; /* নিচে ফাঁকা জায়গা */
+    border: 1px solid #ddd; /* হালকা ধূসর বর্ডার */
+    border-radius: 6px; /* গোলাকার কোণ */
+    font-size: 16px; /* স্বাভাবিক ফন্ট সাইজ */
+    transition: border-color 0.3s; /* বর্ডার কালার পরিবর্তনে ট্রানজিশন */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #3498db; /* ফোকাস হলে বর্ডার রঙ নীল */
+    outline: none; /* ডিফল্ট আউটলাইন সরানো */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* নীল ছায়া ফোকাস এফেক্ট */
+}
+
+input[type="submit"] {
+    width: 100%; /* বাটনের প্রস্থ ১০০% */
+    padding: 12px; /* প্যাডিং */
+    background-color: #28a745; /* সবুজ ব্যাকগ্রাউন্ড */
+    color: #fff; /* ফন্ট সাদা */
+    border: none; /* বর্ডার নেই */
+    border-radius: 6px; /* গোলাকার কোণ */
+    cursor: pointer; /* কার্সর হ্যান্ড আইকন */
+    font-size: 16px; /* ফন্ট সাইজ */
+    font-weight: 500; /* মাঝারি মোটা */
+    transition: background-color 0.3s, transform 0.2s; /* ব্যাকগ্রাউন্ড ও ট্রান্সফর্ম পরিবর্তনে মসৃণতা */
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; /* হোভার করলে গাঢ় সবুজ */
+    transform: translateY(-2px); /* হোভার হলে সামান্য উপরে উঠানো */
+}
+
+input[type="submit"]:active {
+    transform: translateY(0); /* ক্লিক করলে নিচে নামানো */
+}
+
+a {
+    display: block; /* ব্লক এলিমেন্ট */
+    text-align: center; /* কেন্দ্রভাগে লেখা */
+    margin-top: 24px; /* উপরে ফাঁকা জায়গা */
+    color: #3498db; /* নীল রঙ */
+    text-decoration: none; /* আন্ডারলাইন নেই */
+    font-weight: 500; /* মাঝারি মোটা */
+    transition: color 0.3s; /* রঙ পরিবর্তনে মসৃণ ট্রানজিশন */
+}
+
+a:hover {
+    color: #1a73e8; /* হোভার করলে রঙ গাঢ় নীল */
+    text-decoration: underline; /* আন্ডারলাইন দেখা যাবে */
+}
