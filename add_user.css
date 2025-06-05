@@ -1,0 +1,70 @@
+/* সম্পূর্ণ ওয়েবসাইটের জন্য বডির সাধারণ স্টাইল */
+body {
+  font-family: Arial, sans-serif; /* ফন্ট সেট করা হয়েছে Arial */
+  background-color: #f4f4f4;      /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+  padding: 20px;                  /* চারপাশে ২০ পিক্সেল প্যাডিং */
+}
+
+/* ফর্ম কনটেইনারের ডিজাইন */
+.container {
+  width: 500px;                   /* কনটেইনারের প্রস্থ ৫০০ পিক্সেল */
+  margin: auto;                   /* মাঝখানে কেন্দ্র করে রাখা */
+  background: #fff;               /* ব্যাকগ্রাউন্ড সাদা */
+  padding: 30px;                  /* ভিতরের প্যাডিং */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* হালকা ছায়া */
+  border-radius: 8px;             /* কোণগুলো গোলাকার */
+}
+
+/* হেডিং স্টাইল */
+h2 {
+  text-align: center;             /* হেডিং মাঝখানে */
+}
+
+/* ফর্ম এলিমেন্ট একসাথে কলাম হিসেবে দেখাতে */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* প্রতিটি লেবেলের ওপর কিছু স্পেস */
+label {
+  margin-top: 10px;
+}
+
+/* ইনপুট, সিলেক্ট, টেক্সটএরিয়া – একরকম স্টাইল */
+input, select, textarea {
+  padding: 10px;                 /* ভিতরের স্পেস */
+  margin-top: 5px;               /* উপর থেকে স্পেস */
+  border-radius: 4px;            /* হালকা গোল কোণা */
+  border: 1px solid #ccc;        /* হালকা ধূসর বর্ডার */
+}
+
+/* টেক্সটএরিয়া শুধুমাত্র উপরে-নিচে রিসাইজ করা যাবে */
+textarea {
+  resize: vertical;
+}
+
+/* সাবমিট বাটনের স্টাইল */
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #28a745;     /* সবুজ রঙ */
+  color: #fff;                    /* টেক্সট সাদা */
+  border: none;                   /* বর্ডার নেই */
+  border-radius: 4px;             /* কোণা গোলাকার */
+  cursor: pointer;                /* কার্সর পরিবর্তন হবে */
+}
+
+/* বাটনে হোভার করলে রঙ একটু গাঢ় হবে */
+button:hover {
+  background-color: #218838;
+}
+
+/* যেকোনো লিংকের স্টাইল */
+a {
+  display: block;                /* ব্লক হিসেবে দেখানো */
+  margin-top: 15px;              /* উপরে কিছু স্পেস */
+  text-align: center;            /* মাঝখানে টেক্সট */
+  color: #333;                   /* গাঢ় ধূসর রঙ */
+  text-decoration: none;         /* আন্ডারলাইন থাকবে না */
+}
