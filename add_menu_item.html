@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- পেজের ক্যারেক্টার সেট নির্ধারণ -->
+    <meta charset="UTF-8" />
+    <!-- রেস্পন্সিভ ডিজাইনের জন্য ভিউপোর্ট সেটিং -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- ব্রাউজারের ট্যাবে শিরোনাম -->
+    <title>Add Menu Item</title>
+    <!-- বাহ্যিক CSS ফাইল লিঙ্ক করা -->
+    <link rel="stylesheet" href="add_menu_item.css">
+</head>
+<body>
+    <!-- ফর্মের বাইরের কন্টেইনার ডিভ. full form: division) হলো একটি "container element"—অর্থাৎ, এটি ব্যবহার করা হয় অন্যান্য HTML উপাদানগুলোকে একসাথে গ্রুপ বা বক্স আকারে সাজাতে। -->
+    <div class="form-container">  
+        <!-- ফর্মের শিরোনাম -->
+        <h2>Add Menu Item</h2>
+        <!-- ফর্ম শুরু: ডাটা POST মেথডে add_menu_item.php-তে যাবে -->
+        <form method="post" action="add_menu_item.php">
+
+            <!-- ডিশের নামের জন্য লেবেল -->
+            <label for="dish_name">Dish Name:</label>
+            <!-- ডিশের নাম ইনপুট ফিল্ড, অবশ্যই দিতে হবে, সর্বোচ্চ ১০০ অক্ষর -->
+            <input type="text" id="dish_name" name="dish_name" required maxlength="100">
+
+            <!-- ক্যাটেগরি লেবেল -->
+            <label for="category">Category:</label>
+            <!-- ক্যাটেগরি ইনপুট ফিল্ড, অবশ্যই দিতে হবে, সর্বোচ্চ ৫০ অক্ষর -->
+            <input type="text" id="category" name="category" required maxlength="50">
+
+            <!-- দামের জন্য লেবেল -->
+            <label for="price">Price (TK):</label>
+            <!-- দাম ইনপুট ফিল্ড, দশমিক সহ সংখ্যা, ন্যূনতম ০.০১, অবশ্যই দিতে হবে -->
+             <!--  name="price" হল ফর্ম সাবমিশনের সময় সার্ভারে পাঠানোর জন্য ফিল্ডের নাম। PHP বা অন্য সার্ভার সাইড ল্যাঙ্গুয়েজে এই নাম ব্যবহার করে ডেটা অ্যাক্সেস করা হয়। -->
+            <input type="number" id="price" name="price" step="0.01" min="0.01" required>
+
+            <!-- অ্যাভেলেবিলিটির জন্য লেবেল -->
+            <label for="availability">Availability:</label>
+            <!-- সিলেক্ট বক্স, অবশ্যই নির্বাচন করতে হবে -->
+            <select id="availability" name="availability" required>
+                <option value="Available">Available</option>
+                <option value="Unavailable">Unavailable</option>
+            </select>
+
+            <!-- সাবমিট বাটন -->
+            <input type="submit" value="Add Item">
+        </form>
+
+        <!-- মেনু লিস্ট পেজে ফেরত যাওয়ার লিঙ্ক -->
+        <a href="menu_list.php">Back to Menu List</a>
+    </div>
+</body>
+</html>
