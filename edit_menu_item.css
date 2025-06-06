@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* পুরো ওয়েবসাইটে ফন্ট স্টাইল নির্ধারণ */
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%); /* ব্যাকগ্রাউন্ডে ডায়াগোনাল গ্রেডিয়েন্ট রঙ */
+    display: flex; /* এলিমেন্টগুলো ফ্লেক্সবক্স ব্যবহার করে সজ্জিত হবে */
+    justify-content: center; /* অনুভূমিকভাবে মাঝখানে রাখা */
+    align-items: center; /* উল্লম্বভাবে মাঝখানে রাখা */
+    height: 100vh; /* পুরো ভিউপোর্ট উচ্চতা vh = viewport height এর সংক্ষিপ্ত রূপ ,100vh = পুরো ভিউপোর্টের ১০০%*/
+    margin: 0; /* বাহিরের কোন মার্জিন থাকবে না */
+}
+
+.form-container {
+    background-color: #ffffffdd; /* ফর্মের ব্যাকগ্রাউন্ড সাদা এবং স্বচ্ছ */
+    padding: 30px 25px; /* উপরে-নিচে ৩০px এবং ডানে-বামে ২৫px প্যাডিং */
+    width: 420px; /* ফর্ম কনটেইনারের প্রস্থ */
+    border-radius: 12px; /* চার কোণা গোল করা */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* হালকা ছায়া যোগ করা */
+    backdrop-filter: blur(10px); /* ব্যাকগ্রাউন্ডে ব্লার এফেক্ট */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* ট্রানজিশন ইফেক্ট স্লো এবং মসৃণ */
+}
+
+.form-container:hover {
+    transform: translateY(-8px); /* হোভার করলে ফর্ম কিছুটা উপরে উঠবে */
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); /* হোভার করলে ছায়া আরও গাঢ় হবে */
+}
+
+h2 {
+    text-align: center; /* হেডিংটি মাঝখানে থাকবে */
+    margin-bottom: 28px; /* নিচে ফাঁকা স্থান */
+    color: #2c3e50; /* লেখার রঙ */
+    font-weight: 700; /* লেখাটি মোটা হবে */
+    letter-spacing: 1px; /* অক্ষরের মাঝে ফাঁকা */
+}
+
+label {
+    display: block; /* লেবেলগুলো পুরো লাইনে থাকবে */
+    margin-top: 15px; /* উপরে ফাঁকা স্থান */
+    margin-bottom: 6px; /* নিচে ফাঁকা স্থান */
+    font-weight: 600; /* কিছুটা মোটা লেখার স্টাইল */
+    color: #34495e; /* লেবেল লেখার রঙ */
+    user-select: none; /* ব্যবহারকারী টেক্সট সিলেক্ট করতে পারবে না */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 90%; /* পুরো প্রস্থ জুড়ে থাকবে */
+    padding: 10px 14px; /* ভিতরের ফাঁকা স্থান */
+    margin-bottom: 20px; /* নিচে ফাঁকা স্থান */
+    border: 2px solid #d1d8e0; /* বর্ডার নির্ধারণ */
+    border-radius: 6px; /* কোণায় গোলাকৃতি */
+    font-size: 16px; /* লেখার আকার */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* ট্রানজিশন মসৃণ */
+    outline: none; /* ফোকাস করলে আউটলাইন সরিয়ে দেওয়া */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #3498db; /* ফোকাস করলে বর্ডারের রঙ পরিবর্তন */
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4); /* ফোকাস করলে ছায়া তৈরি হবে */
+}
+
+input[type="submit"] {
+    width: 100%; /* সাবমিট বাটন পুরো প্রস্থ নেবে */
+    padding: 14px 0; /* উপর-নিচ প্যাডিং */
+    background-color: #3498db; /* ব্যাকগ্রাউন্ড রঙ */
+    color: #fff; /* লেখার রঙ */
+    font-size: 18px; /* লেখার আকার */
+    font-weight: 700; /* লেখাটি মোটা হবে */
+    border: none; /* কোন বর্ডার থাকবে না */
+    border-radius: 8px; /* কোণা গোলাকৃতি */
+    cursor: pointer; /* মাউস পয়েন্টার চেঞ্জ হবে */
+    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.6); /* ছায়া যোগ করা */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* ট্রানজিশন ইফেক্ট */
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9; /* হোভার করলে ব্যাকগ্রাউন্ড রঙ পরিবর্তন */
+    box-shadow: 0 8px 20px rgba(41, 128, 185, 0.7); /* হোভার করলে ছায়া আরও বড় হবে */
+}
+
+a {
+    display: block; /* লিংক ব্লক আকারে দেখাবে */
+    text-align: center; /* মাঝখানে থাকবে */
+    margin-top: 18px; /* উপরে ফাঁকা স্থান */
+    color: #2980b9; /* লেখার রঙ */
+    font-weight: 600; /* মোটা লেখা */
+    text-decoration: none; /* আন্ডারলাইন সরানো */
+    transition: color 0.3s ease; /* মসৃণ রঙ পরিবর্তন */
+    user-select: none; /* টেক্সট সিলেক্ট করতে পারবে না */
+}
+
+a:hover {
+    color: #1c5980; /* হোভার করলে রঙ পরিবর্তন */
+    text-decoration: underline; /* হোভার করলে আন্ডারলাইন হবে */
+}
