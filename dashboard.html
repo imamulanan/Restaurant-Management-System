@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- HTML ডকুমেন্ট শুরু, ভাষা ইংরেজি -->
+<head>
+  <meta charset="UTF-8" /> <!-- ক্যারেক্টার এনকোডিং সেট করা -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- মোবাইল রেস্পন্সিভের জন্য ভিউপোর্ট সেটিং -->
+  <title>Dashboard - Restaurant Management System</title> <!-- ব্রাউজার ট্যাবের শিরোনাম -->
+  <link rel="stylesheet" href="dashboard.css"> <!-- CSS ফাইল যুক্ত করা -->
+</head>
+<body>
+
+  <!-- হেডার সেকশন -->
+  <header>
+    <h1>Restaurant Management System - Admin Panel</h1> <!-- ওয়েবসাইটের টাইটেল -->
+  </header>
+
+  <!-- নেভিগেশন মেনু -->
+  <nav>
+    <a href="dashboard.html">Dashboard</a> <!-- ড্যাশবোর্ড লিংক -->
+    <a href="order.html">Place Order</a> <!-- অর্ডার দেওয়ার পৃষ্ঠা -->
+    <a href="view_orders.php">Orders</a> <!-- অর্ডার দেখার পৃষ্ঠা -->
+    <a href="menu_list.php">Menu Management</a> <!-- মেনু ব্যবস্থাপনা -->
+    <a href="sales_report.html">Sales Report</a> <!-- বিক্রয় প্রতিবেদন -->
+    <a href="manage_users.php">User Management</a> <!-- ইউজার ব্যবস্থাপনা -->
+    <a href="feedback.php">Feedback</a> <!-- ফিডব্যাক পৃষ্ঠা -->
+    <a href="payment.html">Payment</a> <!-- পেমেন্ট পৃষ্ঠা -->
+    <a href="logout.php">Logout</a> <!-- লগআউট অপশন -->
+  </nav>
+
+  <!-- মূল কনটেন্ট -->
+  <div class="container">
+    <div class="welcome">
+      <h2>Welcome to the Dashboard!</h2> <!-- স্বাগত বার্তা -->
+      <p>Here's a quick overview of your restaurant's performance today.</p> <!-- আজকের সংক্ষিপ্ত তথ্য -->
+    </div>
+
+    <!-- পরিসংখ্যান অংশ -->
+    <div class="stats">
+      <div class="card">
+        <h3>Total Orders Today</h3>
+        <p>50</p> <!-- মোট অর্ডার (স্ট্যাটিক তথ্য) -->
+      </div>
+
+      <div class="card">
+        <h3>Total Sales</h3>
+        <p>1,10,250TK</p> <!-- মোট বিক্রয় (স্ট্যাটিক তথ্য) -->
+      </div>
+
+      <div class="card">
+        <h3>Menu Items</h3>
+        <p>35</p> <!-- মোট মেনু আইটেম -->
+      </div>
+
+      <div class="card">
+        <h3>Registered Users</h3>
+        <p>12</p> <!-- মোট নিবন্ধিত ইউজার -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ফুটার -->
+  <footer>
+    &copy; 2025 Restaurant Management System. All rights reserved. <!-- কপিরাইট -->
+  </footer>
+
+</body>
+</html>
