@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif; /* পুরো ওয়েবসাইটে Arial ফন্ট ব্যবহার করা হচ্ছে */
+  background: url('img_07.jpg') no-repeat center center fixed; /* ব্যাকগ্রাউন্ডে একটি ছবি যুক্ত করা হয়েছে, যেটি স্ক্রল করলেও একই অবস্থানে থাকবে */
+  background-size: cover; /* ব্যাকগ্রাউন্ড ইমেজ সম্পূর্ণ স্ক্রিন জুড়ে থাকবে */
+  display: flex; /* ফ্লেক্সবক্স ব্যবহার করে কনটেন্ট সাজানো */
+  justify-content: center; /* অনুভূমিকভাবে মাঝখানে রাখা */
+  align-items: center; /* উল্লম্বভাবে মাঝখানে রাখা */
+  height: 100vh; /* সম্পূর্ণ ভিউপোর্ট উচ্চতা */
+  margin: 0; /* পেইজের চারপাশে কোনো মার্জিন থাকবে না */
+}
+
+.payment-container {
+  background-color: rgba(0, 0, 0, 0.6); /* কালো রঙের আধা-পারদর্শী ব্যাকগ্রাউন্ড */
+  padding: 30px; /* ভিতরের কনটেন্টের চারপাশে প্যাডিং */
+  border-radius: 8px; /* কোনাগুলো একটু গোলাকার করা হয়েছে */
+  color: #fff; /* লেখা সাদা রঙে */
+  width: 400px; /* নির্দিষ্ট প্রস্থ */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* হালকা ছায়া যোগ করা */
+}
+
+h2 {
+  text-align: center; /* টেক্সট মাঝখানে */
+  margin-bottom: 20px; /* নিচে কিছু ফাঁকা জায়গা রাখা */
+}
+
+label {
+  display: block; /* প্রতিটি লেবেল আলাদা লাইনে থাকবে */
+  margin-bottom: 8px; /* নিচে কিছু জায়গা */
+  font-weight: bold; /* গাঢ় (bold) ফন্ট */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%; /* ইনপুট বক্স পুরো প্রস্থ জুড়ে থাকবে */
+  padding: 10px; /* ইনপুটের ভিতরে ফাঁকা জায়গা */
+  margin-bottom: 18px; /* নিচে ফাঁকা জায়গা */
+  border: none; /* কোন বর্ডার নেই */
+  border-radius: 4px; /* কোণগুলো একটু গোল */
+  box-sizing: border-box; /* প্যাডিং এবং বর্ডারকে প্রস্থের মধ্যে রাখে */
+  font-size: 14px; /* টেক্সটের আকার */
+}
+
+input[type="submit"] {
+  width: 100%; /* বাটন পুরো প্রস্থে থাকবে */
+  padding: 12px; /* বাটনের ভিতরে ফাঁকা জায়গা */
+  background-color: #28a745; /* সবুজ রঙ */
+  color: white; /* বাটনের লেখা সাদা */
+  border: none; /* কোন বর্ডার নেই */
+  border-radius: 4px; /* কোণগুলো গোল */
+  cursor: pointer; /* মাউস নিলে হ্যান্ড কার্সর দেখাবে */
+  font-size: 16px; /* লেখা বড় */
+}
+
+input[type="submit"]:hover {
+  background-color: #218838; /* হোভার করলে আরও গাঢ় সবুজ হয়ে যাবে */
+}
