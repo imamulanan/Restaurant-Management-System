@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif; /* পুরো পেজে Arial ফন্ট ব্যবহার */
+  background: url('img_06.jpg') no-repeat center center fixed; /* ব্যাকগ্রাউন্ড ইমেজ সেট, সেন্টার এবং স্ক্রল করলে থাকবেই */
+  background-size: cover; /* ইমেজ পুরো পেজ ঢেকে রাখবে */
+  display: flex; /* display: flex মানে হলো ফ্লেক্সবক্স লেআউট সিস্টেম ব্যবহার করা — যা CSS-এ উপাদানগুলো (elements) স্মার্টভাবে সাজানোর একটি আধুনিক উপায়।*/
+  
+  justify-content: center; /* অনুভূমিকভাবে সেন্টার */
+  align-items: center; /* উলম্বভাবে সেন্টার */
+  height: 100vh; /* পুরো স্ক্রিনের উচ্চতা */
+  margin: 0; /* কোনো ডিফল্ট মার্জিন নেই */
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* অর্ধস্বচ্ছ কালো ব্যাকগ্রাউন্ড */
+  padding: 40px 30px; /* উপরে-নিচে ও পাশে প্যাডিং */
+  border-radius: 10px; /* বক্সের কোণাগুলো গোলাকৃতি */
+  box-shadow: 0 0 20px rgba(0,0,0,0.3); /* বক্সের চারপাশে হালকা ছায়া */
+  width: 350px; /* নির্দিষ্ট প্রস্থ */
+  color: #fff; /* লেখা সাদা রঙের */
+  text-align: center; /* লেখাগুলো সেন্টার অ্যালাইন */
+}
+
+.overlay img {
+  width: 100px; /* ছবির প্রস্থ ১০০ পিক্সেল */
+  height: auto; /* অনুপাত বজায় রেখে উচ্চতা */
+  margin-bottom: 20px; /* নিচে কিছু ফাঁকা জায়গা */
+}
+
+h2 {
+  margin-bottom: 25px; /* হেডিংয়ের নিচে ফাঁকা জায়গা */
+  color: #fff; /* হেডিং সাদা */
+}
+
+label {
+  display: block; /* ব্লক হিসেবে প্রদর্শিত */
+  margin-bottom: 8px; /* নিচে ফাঁকা জায়গা */
+  font-weight: bold; /* মোটা হরফে লেখা */
+  color: #eee; /* হালকা সাদা রঙ */
+  text-align: left; /* বামদিকে লেখা */
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%; /* পুরো প্রস্থ জুড়ে */
+  padding: 10px; /* ভিতরের ফাঁকা জায়গা */
+  margin-bottom: 18px; /* নিচে গ্যাপ */
+  border: none; /* বর্ডার নেই */
+  border-radius: 4px; /* হালকা গোলাকৃতি কোণা */
+  box-sizing: border-box; /* padding সহ width হিসাব */
+}
+
+input[type="submit"] {
+  width: 100%; /* পুরো প্রস্থ */
+  padding: 12px; /* ভিতরের স্পেস */
+  background-color: #28a745; /* সবুজ রঙ */
+  color: white; /* লেখার রঙ সাদা */
+  border: none; /* বর্ডার নেই */
+  border-radius: 4px; /* কোণা গোলাকৃতি */
+  cursor: pointer; /* হ্যান্ড কার্সর দেখাবে */
+  transition: background-color 0.3s ease; /* হোভার এফেক্টের জন্য স্মুথ পরিবর্তন */
+}
+
+input[type="submit"]:hover {
+  background-color: #218838; /* হোভার করলে গাঢ় সবুজ */
+}
+
+.links {
+  text-align: center; /* লিংকগুলো সেন্টার অ্যালাইন */
+  margin-top: 15px; /* উপরের দিকে কিছু গ্যাপ */
+}
+
+.links a {
+  color: #fff; /* লিংক সাদা রঙে */
+  text-decoration: underline; /* আন্ডারলাইন করা */
+}
+
+.links a:hover {
+  color: #ccc; /* হোভার করলে হালকা ধূসর */
+}
