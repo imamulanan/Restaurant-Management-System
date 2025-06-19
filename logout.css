@@ -1,0 +1,82 @@
+/* পুরো বডির জন্য স্টাইল */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* আরামদায়ক ফন্ট */
+  background: linear-gradient(135deg, #e0eafc, #cfdef3); /* নীল-সাদা গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+  margin: 0; /* ডিফল্ট মার্জিন রিমুভ */
+  padding: 0; /* ডিফল্ট প্যাডিং রিমুভ */
+  display: flex; /* ফ্লেক্সবক্স ব্যবহার */
+  justify-content: center; /* অনুভূমিকভাবে কেন্দ্রে রাখা */
+  align-items: center; /* উল্লম্বভাবে কেন্দ্রে রাখা */
+  height: 100vh; /* পুরো স্ক্রিনের উচ্চতা */
+  flex-direction: column; /* উপরের নিচে উপাদান সাজানো */
+}
+
+/* লগআউট বক্স */
+.logout-container {
+  background-color: #fff; /* সাদা ব্যাকগ্রাউন্ড */
+  padding: 50px 35px; /* উপরে-নিচে ৫০px, পাশে ৩৫px */
+  border-radius: 12px; /* কোণাগুলো গোলাকার */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* হালকা ছায়া */
+  text-align: center; /* টেক্সট কেন্দ্রভাগে */
+  width: 90%; /* ডিভাইস অনুযায়ী প্রস্থ */
+  max-width: 400px; /* সর্বোচ্চ প্রস্থ ৪০০px */
+  animation: fadeIn 0.6s ease-in-out; /* হালকা ফেইড ইন অ্যানিমেশন */
+}
+
+/* হেডিং */
+.logout-container h2 {
+  color: #222; /* গাঢ় কালো রঙ */
+  font-size: 28px; /* বড় ফন্ট */
+  margin-bottom: 15px; /* নিচে ফাঁকা জায়গা */
+}
+
+/* প্যারাগ্রাফ */
+.logout-container p {
+  color: #555; /* মাঝারি ধূসর রঙ */
+  font-size: 16px; /* সাধারণ ফন্ট সাইজ */
+  margin-bottom: 30px; /* নিচে ফাঁকা */
+}
+
+/* লগইন বাটন */
+.button {
+  display: inline-block; /* শুধুমাত্র display: inline দিলে:এক লাইনে থাকবে কিন্তু width, height, margin-top, padding ঠিকভাবে কাজ করে না ,
+শুধুমাত্র display: block দিলে:পুরো লাইনের জায়গা নিয়ে নেয় কিন্তু এক লাইনে একটাই ব্লক থাকে ,
+display: inline-block দিলে:ইনলাইনের মতো এক লাইনে বসতে পারে আবার ব্লকের মতো width, height, padding, margin সব কাজ করে ইনলাইন ব্লক এলিমেন্ট */
+  padding: 12px 25px; /* ভিতরের জায়গা */
+  font-size: 16px; /* ফন্ট সাইজ */
+  color: white; /* লেখার রঙ সাদা */
+  background-color: #007bff; /* নীল ব্যাকগ্রাউন্ড */
+  border: none; /* বর্ডার নেই */
+  border-radius: 25px; /* পুরো গোল বাটন */
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* ট্রানজিশন */
+  box-shadow: 0 5px 15px rgba(0,123,255,0.4); /* হালকা ছায়া */
+}
+
+/* হোভার অবস্থায় */
+.button:hover {
+  background-color: #0056b3; /* গাঢ় নীল */
+  transform: translateY(-2px); /* উপরে উঠবে হালকা */
+}
+
+/* ফুটার */
+footer {
+  margin-top: 40px; /* উপরে ফাঁকা জায়গা */
+  text-align: center; /* টেক্সট সেন্টার */
+  padding: 10px; /* ভিতরে জায়গা */
+  color: #666; /* ধূসর রঙ */
+  font-size: 14px; /* ছোট ফন্ট */
+}
+
+/* fade-in animation এর জন্য */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* শুরুতে অদৃশ্য */
+    transform: translateY(30px); /* নিচ থেকে আসবে */
+  }
+  to {
+    opacity: 1; /* পুরোপুরি দৃশ্যমান */
+    transform: translateY(0); /* স্বাভাবিক অবস্থানে */
+  }
+}
+
