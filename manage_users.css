@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif; /* পুরো পেজে Arial ফন্ট ব্যবহার */
+  background-color: #f4f4f4; /* পেজের ব্যাকগ্রাউন্ড হালকা ধূসর রঙ */
+  margin: 0; /* পেজের চারপাশের ডিফল্ট মার্জিন মুছে ফেলা */
+  padding: 0; /* পেজের চারপাশের ডিফল্ট প্যাডিং মুছে ফেলা */
+ 
+}
+
+header {
+  background-color: #333; /* হেডারের ব্যাকগ্রাউন্ড গাঢ় ধূসর */
+  color: #fff; /* হেডারের লেখার রঙ সাদা */
+  padding: 15px 0; /* উপরে-নিচে ১৫ পিক্সেল প্যাডিং */
+  text-align: center; /* লেখাকে কেন্দ্রভাগে দেখানো */
+}
+
+nav {
+  background-color: #444; /* নেভিগেশন বার এর ব্যাকগ্রাউন্ড একটু হালকা ধূসর */
+  display: flex; /* ফ্লেক্সবক্স ব্যবহার করে নেভিগেশন লিংকগুলো সাজানো */
+  justify-content: center; /* লিংকগুলো অনুভূমিকভাবে কেন্দ্রভাগে রাখা */
+  flex-wrap: wrap; /* ছোট স্ক্রিনে লিংকগুলো নিচের লাইনে নামার অনুমতি দেয়া */
+}
+
+nav a {
+  color: #fff; /* নেভিগেশন লিংকগুলোর লেখা সাদা */
+  padding: 14px 20px; /* লিংকগুলোর চারপাশে প্যাডিং */
+  display: block; /* লিংকগুলো ব্লক হিসেবে দেখানো যাতে পুরো এলাকা ক্লিকযোগ্য হয় */
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+  transition: background-color 0.3s ease; /* হোভার ইফেক্টের জন্য ব্যাকগ্রাউন্ড রঙের পরিবর্তনের স্মুথ অ্যানিমেশন */
+}
+
+nav a:hover {
+  background-color: #555; /* মাউস রাখলে লিংকের ব্যাকগ্রাউন্ড গাঢ় ধূসর হবে */
+}
+
+.container {
+  max-width: 80%; /* সর্বোচ্চ প্রস্থ ১২০০ পিক্সেল */
+  margin: 30px auto; /* উপরে-নীচে ৩০ পিক্সেল ফাঁকা, বাম-ডানে স্বয়ংক্রিয় মার্জিন (কেন্দ্রায়ণ) */
+  background-color: #fff; /* কন্টেন্টের পটভূমি সাদা */
+  padding: 20px; /* ভিতরে চারপাশে ২০ পিক্সেল প্যাডিং */
+  border-radius: 8px; /* কোণাগুলোকে গোলাকার করা */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* হালকা ছায়া */
+}
+
+h2 {
+  text-align: center; /* শিরোনাম কেন্দ্রায়িত */
+  margin-bottom: 20px; /* নিচে ২০ পিক্সেল ফাঁকা */
+}
+
+.add-btn {
+  display: inline-block; /* ইনলাইন-ব্লক হিসেবে বাটন */
+  margin-bottom: 20px; /* নিচে ২০ পিক্সেল ফাঁকা */
+  background-color: #28a745; /* সবুজ রঙের ব্যাকগ্রাউন্ড */
+  color: #fff; /* লেখার রঙ সাদা */
+  padding: 10px 15px; /* ভিতরে প্যাডিং */
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+  border-radius: 4px; /* হালকা গোল কোণা */
+  transition: background-color 0.3s ease; /* হোভার ইফেক্ট স্মুথ অ্যানিমেশন */
+}
+
+.add-btn:hover {
+  background-color: #218838; /* হোভার করলে গাঢ় সবুজ */
+}
+
+table {
+  width: 100%; /* টেবিল সম্পূর্ণ প্রস্থ নেবে */
+  border-collapse: collapse; /* টেবিলের সীমানা একত্রিত করা */
+}
+
+th, td {
+  padding: 12px; /* টেবিলের সেলগুলোতে প্যাডিং */
+  border: 1px solid #ddd; /* সেলগুলোর চারপাশে হালকা ধূসর বর্ডার */
+  text-align: center; /* টেক্সট সেন্টার করা */
+}
+
+th {
+  background-color: #333; /* হেডার সেলগুলো গাঢ় ধূসর ব্যাকগ্রাউন্ড */
+  color: #fff; /* হেডার সেলের লেখা সাদা */
+}
+
+tr:hover {
+  background-color: #f1e1e1; /* মাউস রাখলে সারির ব্যাকগ্রাউন্ড হালকা ধূসর */
+}
+
+.action-btn {
+  padding: 6px 12px; /* বাটনের ভিতরে প্যাডিং */
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+  border-radius: 4px; /* হালকা গোল কোণা */
+  color: #fff; /* লেখার রঙ সাদা */
+  margin: 2px; /* চারপাশে ২ পিক্সেল ফাঁকা */
+  display: inline-block; /* ইনলাইন-ব্লক হিসেবে */
+  transition: background-color 0.3s ease; /* হোভার এফেক্টের জন্য স্মুথ অ্যানিমেশন */
+}
+
+.edit-btn {
+  background-color: #007bff; /* নীল রঙের এডিট বাটন */
+}
+
+.edit-btn:hover {
+  background-color: #0056b3; /* হোভার করলে গাঢ় নীল */
+}
+
+.delete-btn {
+  background-color: #dc3545; /* লাল রঙের ডিলিট বাটন */
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* হোভার করলে গাঢ় লাল */
+}
+
+footer {
+  margin-top: 40px; /* উপরে ৪০ পিক্সেল ফাঁকা */
+  text-align: center; /* টেক্সট সেন্টার করা */
+  padding: 20px 0; /* উপরে-নিচে ২০ পিক্সেল প্যাডিং */
+  background-color: #333; /* ফুটারের ব্যাকগ্রাউন্ড গাঢ় ধূসর */
+  color: #fff; /* ফুটারের লেখা সাদা */
+}
