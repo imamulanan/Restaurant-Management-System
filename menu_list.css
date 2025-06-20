@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif; /* পুরো পেজে Arial ফন্ট ব্যবহার, না থাকলে অন্য sans-serif ফন্ট */
+  background-color: #fffbfb; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+  margin: 0; /* পেজের ডিফল্ট মার্জিন মুছে ফেলা */
+  padding: 0; /* পেজের ডিফল্ট প্যাডিং মুছে ফেলা */
+}
+
+header {
+  background-color: #333; /* হেডারের গাঢ় ধূসর ব্যাকগ্রাউন্ড */
+  color: #fff; /* হেডারের লেখা সাদা */
+  padding: 15px 0; /* উপরে-নিচে ১৫ পিক্সেল প্যাডিং */
+  text-align: center; /* হেডারের লেখা কেন্দ্রায়িত */
+}
+
+nav {
+  background-color: #444; /* নেভিগেশন বারের হালকা গাঢ় ধূসর ব্যাকগ্রাউন্ড */
+  display: flex; /* ফ্লেক্সবক্স লেআউট */
+  justify-content: center; /* আইটেমগুলোকে অনুভূমিকভাবে কেন্দ্রে রাখবে */
+  flex-wrap: wrap; /* ছোট স্ক্রিনে লিঙ্কগুলো নিচে নামবে */
+}
+
+nav a {
+  color: #fff; /* নেভিগেশন লিঙ্কের লেখা সাদা */
+  padding: 14px 20px; /* লিঙ্কের চারপাশে প্যাডিং */
+  display: block; /* পুরো এলাকা ক্লিকযোগ্য করার জন্য ব্লক হিসেবে প্রদর্শন */
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+}
+
+nav a:hover {
+  background-color: #555; /* হোভার করলে ব্যাকগ্রাউন্ড একটু গাঢ় ধূসর */
+}
+
+.container {
+  max-width: 1000px; /* কন্টেইনার সর্বোচ্চ প্রস্থ ১০০০ পিক্সেল */
+  margin: 30px auto; /* উপরে-নিচে ৩০ পিক্সেল ফাঁকা, বাম-ডানে স্বয়ংক্রিয় মার্জিন (কেন্দ্রায়ণ) */
+  padding: 20px; /* ভিতরে ২০ পিক্সেল প্যাডিং */
+  background-color: #fff; /* পটভূমি সাদা */
+  border-radius: 8px; /* কোণাগুলো গোলাকার */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* হালকা ছায়া */
+}
+
+h2 {
+  text-align: center; /* শিরোনাম কেন্দ্রায়িত */
+  margin-bottom: 20px; /* নিচে ২০ পিক্সেল ফাঁকা */
+}
+
+.add-btn {
+  display: inline-block; /* ইনলাইন ব্লক, যাতে পাশে অন্যান্য এলিমেন্ট আসতে পারে */
+  margin-bottom: 20px; /* নিচে ২০ পিক্সেল ফাঁকা */
+  background-color: #28a745; /* সবুজ ব্যাকগ্রাউন্ড */
+  color: #fff; /* লেখার রঙ সাদা */
+  padding: 10px 15px; /* প্যাডিং */
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+  border-radius: 1px; /* হালকা গোল কোণা */
+}
+
+.add-btn:hover {
+  background-color: #218838; /* হোভার করলে গাঢ় সবুজ */
+}
+
+table {
+  width: 100%; /* টেবিল পুরো প্রস্থ নেবে */
+  border-collapse: collapse; /* বর্ডারগুলো একত্রিত */
+}
+
+th, td {
+  padding: 12px; /* সেলগুলোতে ভিতরের জায়গা */
+  border: 1px solid #ddd; /* হালকা ধূসর বর্ডার */
+  text-align: center; /* লেখা কেন্দ্রায়িত */
+}
+
+th {
+  background-color: #333; /* হেডার সেলের গাঢ় ধূসর ব্যাকগ্রাউন্ড */
+  color: #f1eeee; /* হেডারের লেখা সাদা */
+}
+
+.action-btn {
+  padding: 6px 12px; /* বাটনের ভিতরে প্যাডিং */
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+  border-radius: 4px; /* হালকা গোল কোণা */
+  color: #fff; /* লেখার রঙ সাদা */
+}
+
+.edit-btn {
+  background-color: #007bff; /* এডিট বাটনের নীল রঙ */
+}
+
+.edit-btn:hover {
+  background-color: #0056b3; /* হোভার করলে গাঢ় নীল */
+}
+
+.delete-btn {
+  background-color: #dc3545; /* ডিলিট বাটনের লাল রঙ */
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* হোভার করলে গাঢ় লাল */
+}
+
+footer {
+  margin-top: 40px; /* উপরে ৪০ পিক্সেল ফাঁকা */
+  text-align: center; /* ফুটারের লেখা কেন্দ্রায়িত */
+  padding: 20px 0; /* উপরে-নিচে ২০ পিক্সেল প্যাডিং */
+  background-color: #333; /* ফুটারের গাঢ় ধূসর ব্যাকগ্রাউন্ড */
+  color: #fff; /* ফুটারের লেখা সাদা */
+}
