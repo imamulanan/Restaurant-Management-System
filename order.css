@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif; /* পুরো পেজে Arial বা অন্য sans-serif ফন্ট ব্যবহার */
+    background-image: url('img_10.jpg'); /* ব্যাকগ্রাউন্ডে ছবি সেট করা হয়েছে */
+    background-size: cover; /* ছবি পুরো ব্যাকগ্রাউন্ড ঢেকে যাবে */
+    background-position: center; /* ছবি কেন্দ্র থেকে প্রদর্শিত হবে */
+    background-repeat: no-repeat; /* ছবি রিপিট হবে না */
+    margin: 0; /* পেজের ডিফল্ট মার্জিন সরানো */
+    padding: 0; /* পেজের ডিফল্ট প্যাডিং সরানো */
+    display: flex; /* ফ্লেক্সবক্স লেআউট ব্যবহার */
+    justify-content: center; /* অনুভূমিকভাবে কেন্দ্রায়িত */
+    align-items: center; /* উলম্বভাবে কেন্দ্রায়িত */
+    height: 100vh; /* ভিউপোর্টের সম্পূর্ণ উচ্চতা দখল করবে */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.5); /* সাদা কালারের আধা-স্বচ্ছ ব্যাকগ্রাউন্ড */
+    padding: 20px; /* ভিতরে ২০ পিক্সেল প্যাডিং */
+    border-radius: 8px; /* কোণাগুলো গোলাকার */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* হালকা ছায়া */
+    width: 300px; /* নির্দিষ্ট প্রস্থ ৩০০ পিক্সেল */
+}
+
+h2 {
+    text-align: center; /* শিরোনাম কেন্দ্রায়িত */
+    margin-bottom: 20px; /* নিচে ২০ পিক্সেল ফাঁকা */
+}
+
+label {
+    display: block; /* লেবেলটি ব্লক হিসেবে প্রদর্শিত */
+    margin-bottom: 5px; /* নিচে ৫ পিক্সেল ফাঁকা */
+    font-weight: bold; /* ফন্টের ওজন-bold */
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 95%; /* ইনপুট ফিল্ড পুরো প্রস্থ নেবে */
+    padding: 8px; /* ভিতরে ৮ পিক্সেল প্যাডিং */
+    margin-bottom: 15px; /* নিচে ১৫ পিক্সেল ফাঁকা */
+    border: 1px solid #ccc; /* হালকা ধূসর বর্ডার */
+    border-radius: 6px; /* হালকা গোল কোণা */
+}
+
+input[type="submit"] {
+    width: 100%;              /* বাটন পুরো প্রস্থ নেবে */
+    padding: 10px;            /* ভিতরে ১০ পিক্সেল প্যাডিং */
+    background-color: #28a745;/* সবুজ ব্যাকগ্রাউন্ড */
+    color: white;             /* লেখার রঙ সাদা */
+    border: none;             /* বর্ডার নেই */
+    border-radius: 4px;       /* হালকা গোল কোণা */
+    cursor: pointer;          /* মাউস পয়েন্টার ক্লিকযোগ্য */
+    margin-top: 10px;         /* উপরে ফাঁকা */
+    display: inline-block;    /* ইনলাইন ব্লক হিসেবে প্রদর্শিত */
+    text-align: center;       /* লেখা কেন্দ্রায়িত */
+    text-decoration: none;    /* আন্ডারলাইন নেই */
+    font-size: 16px;          /* ফন্ট সাইজ */
+}
+
+.back-button {
+    width: 93%;              /* বাটন পুরো প্রস্থ নেবে */
+    padding: 10px;            /* ভিতরে ১০ পিক্সেল প্যাডিং */
+    color: white;             /* লেখার রঙ সাদা */
+    border: none;             /* বর্ডার নেই */
+    border-radius: 4px;       /* হালকা গোল কোণা */
+    cursor: pointer;          /* মাউস পয়েন্টার ক্লিকযোগ্য */
+    margin-top: 10px;         /* উপরে ফাঁকা */
+    display: inline-block;    /* ইনলাইন ব্লক হিসেবে প্রদর্শিত */
+    text-align: center;       /* লেখা কেন্দ্রায়িত */
+    text-decoration: none;    /* আন্ডারলাইন নেই */
+    font-size: 16px;          /* ফন্ট সাইজ */
+}
+
+
+input[type="submit"]:hover {
+    background-color: #218838; /* সাবমিট বাটনের হোভার কালার গাঢ় সবুজ */
+}
+
+.back-button {
+    background-color: #007bff; /* ব্যাক বাটনের নীল ব্যাকগ্রাউন্ড */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* ব্যাক বাটনের হোভার গাঢ় নীল */
+}
