@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif; /* পুরো পেজে Arial ফন্ট ব্যবহার, যদি না থাকে তবে অন্য sans-serif ফন্ট */
+  background-color: #f4f4f4; /* ব্যাকগ্রাউন্ড হালকা ধূসর রঙ */
+  margin: 0; /* পেজের ডিফল্ট মার্জিন মুছে ফেলা */
+  padding: 0; /* পেজের ডিফল্ট প্যাডিং মুছে ফেলা */
+}
+
+header {
+  background-color: #333; /* হেডারের ব্যাকগ্রাউন্ড গাঢ় ধূসর */
+  color: #fff; /* হেডারের লেখা সাদা */
+  padding: 15px 0; /* উপরে এবং নিচে ১৫ পিক্সেল প্যাডিং */
+  text-align: center; /* লেখা কেন্দ্রে */
+}
+
+nav {
+  background-color: #444; /* নেভিগেশন বারের ব্যাকগ্রাউন্ড একটু হালকা ধূসর */
+  display: flex; /* ফ্লেক্সবক্সে নেভিগেশন আইটেমগুলো রাখা */
+  justify-content: center; /* আইটেমগুলোকে অনুভূমিকভাবে কেন্দ্রে রাখা */
+  flex-wrap: wrap; /* ছোট স্ক্রিনে আইটেমগুলো নিচে নামতে পারে */
+}
+
+nav a {
+  color: #fff; /* নেভিগেশন লিঙ্কের লেখা সাদা */
+  padding: 14px 20px; /* লিঙ্কের চারপাশে প্যাডিং */
+  display: block; /* পুরো এলাকা ক্লিকযোগ্য করার জন্য ব্লক হিসেবে প্রদর্শন */
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+}
+
+nav a:hover {
+  background-color: #555; /* হোভার করলে ব্যাকগ্রাউন্ড একটু গাঢ় ধূসর */
+}
+
+.container {
+  max-width: 1000px; /* সর্বোচ্চ প্রস্থ ১০০০ পিক্সেল */
+  margin: 30px auto; /* উপরে ও নিচে ৩০ পিক্সেল ফাঁকা, বাম ডানে স্বয়ংক্রিয় মার্জিন (কেন্দ্রায়ণ) */
+  padding: 20px; /* ভিতরে ২০ পিক্সেল প্যাডিং */
+  background-color: #fff; /* পটভূমি সাদা */
+  border-radius: 8px; /* কোণাগুলো গোলাকার */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* হালকা ছায়া */
+}
+
+h2 {
+  text-align: center; /* শিরোনাম কেন্দ্রায়িত */
+  margin-bottom: 20px; /* নিচে ২০ পিক্সেল ফাঁকা */
+}
+
+table {
+  width: 100%; /* টেবিল পূর্ণ প্রস্থ নেবে */
+  border-collapse: collapse; /* টেবিলের বর্ডারগুলো একত্রিত */
+}
+
+th, td {
+  padding: 12px; /* সেলগুলোতে ভিতরে প্যাডিং */
+  border: 1px solid #ddd; /* সেলগুলোর চারপাশে হালকা ধূসর বর্ডার */
+  text-align: center; /* টেক্সট কেন্দ্রায়িত */
+}
+
+th {
+  background-color: #333; /* টেবিলের হেডার সেল গাঢ় ধূসর */
+  color: #fff; /* হেডারের লেখা সাদা */
+}
+
+.action-btn {
+  padding: 6px 12px; /* বাটনের ভিতরে প্যাডিং */
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+  border-radius: 4px; /* হালকা গোল কোণা */
+  color: #fff; /* লেখা সাদা */
+}
+
+.edit-btn {
+  background-color: #007bff; /* এডিট বাটনের নীল রঙ */
+}
+
+.edit-btn:hover {
+  background-color: #0056b3; /* হোভার করলে গাঢ় নীল */
+}
+
+footer {
+  margin-top: 40px; /* উপরে ৪০ পিক্সেল ফাঁকা */
+  text-align: center; /* ফুটারের লেখা কেন্দ্রায়িত */
+  padding: 20px 0; /* উপরে-নিচে ২০ পিক্সেল প্যাডিং */
+  background-color: #333; /* ফুটারের ব্যাকগ্রাউন্ড গাঢ় ধূসর */
+  color: #fff; /* ফুটারের লেখা সাদা */
+}
