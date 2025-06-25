@@ -1,97 +1,233 @@
+:root {
+  --primary: #4361ee;
+  --primary-dark: #3a0ca3;
+  --secondary: #7209b7;
+  --accent: #f72585;
+  --light: #f8f9fa;
+  --dark: #1a1a2e;
+  --glass: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ফন্ট সেট করা */
-    background-color: #f8f9fa; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
-    display: flex; /* ফ্লেক্সবক্স দিয়ে লেআউট */
-    justify-content: center; /* অনুভূমিকভাবে কেন্দ্রীকরণ */
-    align-items: center; /* উলম্বভাবে কেন্দ্রীকরণ */
-    min-height: 100vh; /* ভিউপোর্ট উচ্চতার সমান */
-    margin: 0; /* ডিফল্ট মার্জিন বাদ দেওয়া */
-    padding: 20px; /* চারপাশে প্যাডিং */
-    background-image: linear-gradient(to right, #f5f7fa, #e4e8f0); /* হালকা গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: var(--light);
+  perspective: 1000px;
 }
 
 .form-container {
-    background-color: #fff; /* সাদা ব্যাকগ্রাউন্ড */
-    padding: 32px; /* ভিতরে বড় প্যাডিং */
-    width: 100%; /* ১০০% প্রস্থ */
-    max-width: 500px; /* সর্বোচ্চ ৫০০ পিক্সেল প্রস্থ */
-    border-radius: 10px; /* গোলাকার কোণ */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* হালকা ছায়া */
-    transition: transform 0.3s ease; /* ট্রান্সফর্ম এফেক্টের জন্য মসৃণ ট্রানজিশন */
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
 }
 
 .form-container:hover {
-    transform: translateY(-5px); /* মাউস ওভার হলে উপরে উঠানো */
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: translateY(-20px) rotateX(2deg) rotateY(2deg);
+  }
 }
 
 h2 {
-    text-align: center; /* লেখা কেন্দ্রভাগে */
-    margin-bottom: 24px; /* নিচে ফাঁকা জায়গা */
-    color: #2c3e50; /* গাঢ় ধূসর রঙ */
-    font-weight: 600; /* একটু মোটা ফন্ট */
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  border-radius: 2px;
 }
 
 label {
-    display: block; /* ব্লক এলিমেন্ট */
-    margin-top: 16px; /* উপরে ফাঁকা জায়গা */
-    font-weight: 500; /* মাঝারি মোটা ফন্ট */
-    color: #34495e; /* গাঢ় ধূসর রঙ */
+  display: block;
+  margin-top: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn 0.6s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 input[type="text"],
 input[type="number"],
 select {
-    width: 100%; /* প্রস্থ ১০০% */
-    padding: 12px; /* প্যাডিং */
-    margin-top: 8px; /* উপরে সামান্য ফাঁকা জায়গা */
-    margin-bottom: 16px; /* নিচে ফাঁকা জায়গা */
-    border: 1px solid #ddd; /* হালকা ধূসর বর্ডার */
-    border-radius: 6px; /* গোলাকার কোণ */
-    font-size: 16px; /* স্বাভাবিক ফন্ট সাইজ */
-    transition: border-color 0.3s; /* বর্ডার কালার পরিবর্তনে ট্রানজিশন */
+  width: 100%;
+  padding: 15px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  transition: var(--transition);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn 0.6s 0.2s forwards;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus,
 select:focus {
-    border-color: #3498db; /* ফোকাস হলে বর্ডার রঙ নীল */
-    outline: none; /* ডিফল্ট আউটলাইন সরানো */
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* নীল ছায়া ফোকাস এফেক্ট */
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(247, 37, 133, 0.3);
+  transform: scale(1.02);
 }
 
 input[type="submit"] {
-    width: 100%; /* বাটনের প্রস্থ ১০০% */
-    padding: 12px; /* প্যাডিং */
-    background-color: #28a745; /* সবুজ ব্যাকগ্রাউন্ড */
-    color: #fff; /* ফন্ট সাদা */
-    border: none; /* বর্ডার নেই */
-    border-radius: 6px; /* গোলাকার কোণ */
-    cursor: pointer; /* কার্সর হ্যান্ড আইকন */
-    font-size: 16px; /* ফন্ট সাইজ */
-    font-weight: 500; /* মাঝারি মোটা */
-    transition: background-color 0.3s, transform 0.2s; /* ব্যাকগ্রাউন্ড ও ট্রান্সফর্ম পরিবর্তনে মসৃণতা */
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn 0.6s 0.4s forwards;
 }
 
 input[type="submit"]:hover {
-    background-color: #218838; /* হোভার করলে গাঢ় সবুজ */
-    transform: translateY(-2px); /* হোভার হলে সামান্য উপরে উঠানো */
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
 }
 
 input[type="submit"]:active {
-    transform: translateY(0); /* ক্লিক করলে নিচে নামানো */
+  transform: translateY(0) scale(0.98);
 }
 
 a {
-    display: block; /* ব্লক এলিমেন্ট */
-    text-align: center; /* কেন্দ্রভাগে লেখা */
-    margin-top: 24px; /* উপরে ফাঁকা জায়গা */
-    color: #3498db; /* নীল রঙ */
-    text-decoration: none; /* আন্ডারলাইন নেই */
-    font-weight: 500; /* মাঝারি মোটা */
-    transition: color 0.3s; /* রঙ পরিবর্তনে মসৃণ ট্রানজিশন */
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn 0.6s 0.6s forwards;
 }
 
 a:hover {
-    color: #1a73e8; /* হোভার করলে রঙ গাঢ় নীল */
-    text-decoration: underline; /* আন্ডারলাইন দেখা যাবে */
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Floating particles background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="50" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="70" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="20" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: 100px 100px;
+  z-index: -1;
+  animation: particleMove 100s linear infinite;
+}
+
+@keyframes particleMove {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-1000px) translateX(-500px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 30px 20px;
+    margin: 0 15px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Input focus labels */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  background: var(--primary-dark);
+  padding: 0 5px;
+  border-radius: 5px;
+  color: white;
 }
