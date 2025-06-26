@@ -1,105 +1,294 @@
+:root {
+  --primary-color: #4a6fa5;
+  --primary-dark: #3a5a8a;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --success-dark: #218838;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --text-color: #495057;
+  --border-color: #ced4da;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
 body {
-  font-family: Arial, sans-serif; /* পুরো পেজে Arial অথবা sans-serif ফন্ট প্রয়োগ */
-  background-color: #f4f4f4; /* হালকা ধূসর ব্যাকগ্রাউন্ড রঙ */
-  margin: 0; /* পেজের বাইরের ডিফল্ট মার্জিন রিমুভ */
-  padding: 0; /* পেজের প্যাডিং রিমুভ */
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
 }
 
 header {
-  background-color: #333; /* হেডারের ডার্ক ধূসর ব্যাকগ্রাউন্ড */
-  color: #fff; /* হেডারের লেখার রঙ সাদা */
-  padding: 15px 0; /* উপরে-নিচে ১৫ পিক্সেল প্যাডিং */
-  text-align: center; /* হেডারের টেক্সট সেন্টার করা */
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.8), rgba(255,255,255,0.3));
 }
 
 nav {
-  background-color: #444; /* ন্যাভিগেশন বার এর একটু হালকা ধূসর রঙ */
-  display: flex; /* ন্যাভ এলিমেন্টগুলো ফ্লেক্সবক্সে সাজানো */
-  justify-content: center; /* আইটেমগুলো মাঝখানে অ্যালাইন */
-  flex-wrap: wrap; /* ছোট স্ক্রিনে ন্যাভ আইটেম নিচে নামতে পারবে */
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
-  color: #fff; /* ন্যাভ লিংকের রঙ সাদা */
-  padding: 14px 20px; /* লিংকের চারপাশে প্যাডিং */
-  display: block; /* ব্লক এলিমেন্ট হিসেবে দেখানো */
-  text-decoration: none; /* আন্ডারলাইন সরানো */
+  color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition);
 }
 
 nav a:hover {
-  background-color: #555; /* হোভার করলে ব্যাকগ্রাউন্ড একটু গাঢ় ধূসর */
+  color: var(--primary-dark);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: var(--primary-color);
+  transition: var(--transition);
+}
+
+nav a:hover::after {
+  width: 70%;
 }
 
 .container {
-  max-width: 600px; /* কন্টেইনারের সর্বোচ্চ প্রস্থ ৬০০ পিক্সেল */
-  margin: 30px auto; /* উপরে-নিচে ৩০ পিক্সেল মার্জিন, এবং বাম-ডানে স্বয়ংক্রিয় কেন্দ্রীকরণ */
-  background-color: #fff; /* কন্টেইনারের ব্যাকগ্রাউন্ড সাদা */
-  padding: 30px; /* ভিতরে চারপাশে ৩০ পিক্সেল প্যাডিং */
-  border-radius: 8px; /* কোণাগুলো গোলাকার */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* হালকা ছায়া */
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.container:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
 }
 
 h2 {
-  text-align: center; /* হেডিং সেন্টারে */
-  margin-bottom: 20px; /* নিচে ২০ পিক্সেল ফাঁকা */
-  color: #333; /* হেডিং টেক্সট গাঢ় ধূসর */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
 }
 
 label {
-  display: block; /* লেবেল ব্লক হিসেবে প্রদর্শন */
-  margin-bottom: 8px; /* নিচে ৮ পিক্সেল ফাঁকা */
-  font-weight: bold; /* ফন্ট ওজন বোল্ড */
-  color: #555; /* লেবেলের রঙ মাঝারি ধূসর */
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-group::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: var(--transition);
+}
+
+.input-group:focus-within::after {
+  width: 100%;
 }
 
 input[type="text"],
 input[type="email"],
 textarea,
 select {
-  width: 100%; /* সম্পূর্ণ প্রস্থ নেবে */
-  padding: 10px; /* ভিতরে ১০ পিক্সেল প্যাডিং */
-  margin-bottom: 20px; /* নিচে ২০ পিক্সেল ফাঁকা */
-  border-radius: 4px; /* কোণাগুলো হালকা গোল */
-  border: 1px solid #ccc; /* হালকা ধূসর বর্ডার */
-  box-sizing: border-box; /* প্যাডিং এবং বর্ডারসহ প্রস্থ নির্ধারণ */
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: rgba(255,255,255,0.9);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
 }
 
 textarea {
-  height: 120px; /* টেক্সটএরিয়ার উচ্চতা ১২০ পিক্সেল */
-  resize: vertical; /* ইউজার টেক্সটএরিয়া উলম্বে বড়/ছোট করতে পারবে */
+  height: 120px;
+  resize: vertical;
+  min-height: 100px;
 }
 
 input[type="submit"] {
-  width: 100%; /* বাটন পুরো প্রস্থ নেবে */
-  padding: 12px; /* ভিতরে ১২ পিক্সেল প্যাডিং */
-  background-color: #28a745; /* সবুজ ব্যাকগ্রাউন্ড */
-  color: #fff; /* বাটনের লেখার রঙ সাদা */
-  border: none; /* বর্ডার নেই */
-  border-radius: 4px; /* বাটনের কোণাগুলো গোল */
-  cursor: pointer; /* হোভার করলে মাউস কার্সর পয়েন্টার হবে */
-  font-size: 16px; /* ফন্ট সাইজ একটু বড় */
-  transition: background-color 0.3s ease; /* ব্যাকগ্রাউন্ড রঙ পরিবর্তনে সফট ট্রানজিশন */
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--success-color), var(--success-dark));
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 6px rgba(40, 167, 69, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
 input[type="submit"]:hover {
-  background-color: #218838; /* হোভার করলে গাঢ় সবুজ ব্যাকগ্রাউন্ড */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
 }
 
 .message {
-  text-align: center; /* মেসেজ সেন্টারে */
-  font-size: 16px; /* ফন্ট সাইজ */
-  padding: 10px; /* চারপাশে ১০ পিক্সেল প্যাডিং */
-  color: #155724; /* সবুজ রঙের লেখা */
-  background-color: #d4edda; /* হালকা সবুজ ব্যাকগ্রাউন্ড */
-  border: 1px solid #c3e6cb; /* হালকা সবুজ বর্ডার */
-  border-radius: 4px; /* কোণাগুলো গোল */
-  margin-bottom: 20px; /* নিচে ২০ পিক্সেল ফাঁকা */
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem;
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 footer {
-  margin-top: 40px; /* উপরে ৪০ পিক্সেল ফাঁকা */
-  text-align: center; /* টেক্সট সেন্টারে */
-  padding: 20px 0; /* উপরে নিচে ২০ পিক্সেল প্যাডিং */
-  background-color: #333; /* ডার্ক ধূসর ব্যাকগ্রাউন্ড */
-  color: #fff; /* লেখার রঙ সাদা */
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1.5rem 0;
+  background: linear-gradient(135deg, var(--dark-color), #212529);
+  color: white;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+}
+
+/* Floating label effect (optional - requires JS) */
+.input-group.focused label {
+  transform: translateY(-25px);
+  font-size: 0.8rem;
+  color: var(--primary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  nav a {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Loading animation for submit button */
+input[type="submit"].loading {
+  color: transparent;
+  position: relative;
+}
+
+input[type="submit"].loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid transparent;
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
