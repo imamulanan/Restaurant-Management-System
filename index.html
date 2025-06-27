@@ -1,46 +1,21 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- HTML ডকুমেন্ট শুরু, এবং ভাষা ইংরেজি নির্ধারণ করা হয়েছে -->
+<html lang="en">
 <head>
-  <meta charset="UTF-8" /> <!-- ক্যারেক্টার এনকোডিং সেট করা হয়েছে -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- রেস্পন্সিভ ডিজাইনের জন্য ভিউপোর্ট কনফিগারেশন -->
-  <title>Login Page</title> <!-- ব্রাউজার ট্যাবে প্রদর্শিত টাইটেল -->
-  <link rel="stylesheet" href="index.css"> <!-- এক্সটার্নাল CSS ফাইল সংযুক্ত করা হয়েছে -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management System</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-  <div class="overlay"> <!-- একটি ওভারলে ডিভ, যেখানে লগইন ফর্মটি থাকবে -->
-    <h1>Restaurant Management System</h1>
-    <h2>Login</h2> <!-- ফর্মের উপরের শিরোনাম -->
-
-    <!-- লগইন ফর্মটি login.php তে পাঠানো হবে -->
-    <form action="login.php" method="post">
-      
-      <!-- ইউজারনেম ইনপুট -->
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" required />
-
-      <!-- পাসওয়ার্ড ইনপুট -->
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required />
-
-      <!-- ইউজার কোন রোলে লগইন করবে সেটা সিলেক্ট করার জন্য -->
-      <label for="role">Login As</label>
-      <select id="role" name="role" required>
-        <option value="">-- Select Role --</option> <!-- ডিফল্ট অপশন -->
-        <option value="admin">Admin</option> <!-- অ্যাডমিন হিসেবে লগইন -->
-        <option value="staff">Staff</option> <!-- স্টাফ হিসেবে লগইন -->
-      </select>
-
-      <!-- সাবমিট বাটন -->
-      <input type="submit" value="Login" />
-    </form>
-
-    <!-- অন্যান্য সহায়ক লিংক -->
-    <div class="links">
-      <p><a href="register.html">Register as New User</a></p> <!-- নতুন ইউজার রেজিস্ট্রেশন লিংক -->
-      <p><a href="forgot_password.php">Forgot Password?</a></p> <!-- পাসওয়ার্ড ভুলে গেলে পুনরুদ্ধার লিংক -->
+    <div class="container">
+        <div class="card">
+            <h1>🍽️ Welcome to RestoManage</h1>
+            <p>Manage your restaurant smartly and efficiently</p>
+            <div class="buttons">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="register.html" class="btn register-btn">Register</a>
+            </div>
+        </div>
     </div>
-  </div>
-
 </body>
 </html>
