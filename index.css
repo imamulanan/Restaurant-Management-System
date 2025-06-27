@@ -1,80 +1,317 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #8a2be2;
+    --secondary: #20b2aa;
+    --accent: #ff6b6b;
+    --text: #e0e0e0;
+    --bg-dark: #121212;
+    --card-bg: rgba(30, 30, 30, 0.8);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --glow: 0 0 15px rgba(138, 43, 226, 0.5);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Body Styling */
 body {
-  font-family: Arial, sans-serif; /* পুরো পেজে Arial ফন্ট ব্যবহার */
-  background: url('img_06.jpg') no-repeat center center fixed; /* ব্যাকগ্রাউন্ড ইমেজ সেট, সেন্টার এবং স্ক্রল করলে থাকবেই */
-  background-size: cover; /* ইমেজ পুরো পেজ ঢেকে রাখবে */
-  display: flex; /* display: flex মানে হলো ফ্লেক্সবক্স লেআউট সিস্টেম ব্যবহার করা — যা CSS-এ উপাদানগুলো (elements) স্মার্টভাবে সাজানোর একটি আধুনিক উপায়।*/
-  
-  justify-content: center; /* অনুভূমিকভাবে সেন্টার */
-  align-items: center; /* উলম্বভাবে সেন্টার */
-  height: 100vh; /* পুরো স্ক্রিনের উচ্চতা */
-  margin: 0; /* কোনো ডিফল্ট মার্জিন নেই */
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: var(--text);
+    line-height: 1.6;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* অর্ধস্বচ্ছ কালো ব্যাকগ্রাউন্ড */
-  padding: 40px 30px; /* উপরে-নিচে ও পাশে প্যাডিং */
-  border-radius: 10px; /* বক্সের কোণাগুলো গোলাকৃতি */
-  box-shadow: 0 0 20px rgba(0,0,0,0.3); /* বক্সের চারপাশে হালকা ছায়া */
-  width: 350px; /* নির্দিষ্ট প্রস্থ */
-  color: #fff; /* লেখা সাদা রঙের */
-  text-align: center; /* লেখাগুলো সেন্টার অ্যালাইন */
+/* Animated Background with Particles */
+body::before {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(32, 178, 170, 0.1) 0%, transparent 20%),
+        repeating-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.01) 0px,
+            rgba(255, 255, 255, 0.01) 1px,
+            transparent 1px,
+            transparent 10px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 0.01) 0px,
+            rgba(255, 255, 255, 0.01) 1px,
+            transparent 1px,
+            transparent 10px
+        );
+    animation: moveBackground 20s infinite linear;
+    z-index: 0;
 }
 
-.overlay img {
-  width: 100px; /* ছবির প্রস্থ ১০০ পিক্সেল */
-  height: auto; /* অনুপাত বজায় রেখে উচ্চতা */
-  margin-bottom: 20px; /* নিচে কিছু ফাঁকা জায়গা */
+/* Floating Particles */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: float 15s infinite linear;
+    z-index: 0;
 }
 
-h2 {
-  margin-bottom: 25px; /* হেডিংয়ের নিচে ফাঁকা জায়গা */
-  color: #fff; /* হেডিং সাদা */
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, 50px);
+    }
+    50% {
+        transform: translate(0, 100px);
+    }
+    75% {
+        transform: translate(-50px, 50px);
+    }
 }
 
-label {
-  display: block; /* ব্লক হিসেবে প্রদর্শিত */
-  margin-bottom: 8px; /* নিচে ফাঁকা জায়গা */
-  font-weight: bold; /* মোটা হরফে লেখা */
-  color: #eee; /* হালকা সাদা রঙ */
-  text-align: left; /* বামদিকে লেখা */
+@keyframes moveBackground {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50%, -50%); }
 }
 
-input[type="text"],
-input[type="password"],
-select {
-  width: 100%; /* পুরো প্রস্থ জুড়ে */
-  padding: 10px; /* ভিতরের ফাঁকা জায়গা */
-  margin-bottom: 18px; /* নিচে গ্যাপ */
-  border: none; /* বর্ডার নেই */
-  border-radius: 4px; /* হালকা গোলাকৃতি কোণা */
-  box-sizing: border-box; /* padding সহ width হিসাব */
+/* Container */
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    perspective: 1000px;
 }
 
-input[type="submit"] {
-  width: 100%; /* পুরো প্রস্থ */
-  padding: 12px; /* ভিতরের স্পেস */
-  background-color: #28a745; /* সবুজ রঙ */
-  color: white; /* লেখার রঙ সাদা */
-  border: none; /* বর্ডার নেই */
-  border-radius: 4px; /* কোণা গোলাকৃতি */
-  cursor: pointer; /* হ্যান্ড কার্সর দেখাবে */
-  transition: background-color 0.3s ease; /* হোভার এফেক্টের জন্য স্মুথ পরিবর্তন */
+/* Card Styling */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px) saturate(180%);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        var(--glow);
+    max-width: 420px;
+    width: 90%;
+    animation: 
+        fadeIn 1s ease forwards,
+        floatCard 6s ease-in-out infinite;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-input[type="submit"]:hover {
-  background-color: #218838; /* হোভার করলে গাঢ় সবুজ */
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(138, 43, 226, 0.1),
+        rgba(32, 178, 170, 0.1),
+        transparent
+    );
+    transform: rotate(30deg);
+    z-index: -1;
 }
 
-.links {
-  text-align: center; /* লিংকগুলো সেন্টার অ্যালাইন */
-  margin-top: 15px; /* উপরের দিকে কিছু গ্যাপ */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(138, 43, 226, 0.6);
 }
 
-.links a {
-  color: #fff; /* লিংক সাদা রঙে */
-  text-decoration: underline; /* আন্ডারলাইন করা */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.links a:hover {
-  color: #ccc; /* হোভার করলে হালকা ধূসর */
+@keyframes floatCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Heading */
+.card h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: inline-block;
+}
+
+.card h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.card:hover h1::after {
+    transform: scaleX(1);
+}
+
+/* Paragraph */
+.card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.3),
+        0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: translateX(100%);
+}
+
+/* Login Button */
+.login-btn {
+    background: linear-gradient(45deg, var(--primary), #6a11cb);
+    color: white;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 
+        0 8px 25px rgba(138, 43, 226, 0.4),
+        0 0 15px rgba(138, 43, 226, 0.3);
+}
+
+/* Register Button */
+.register-btn {
+    background: linear-gradient(45deg, var(--secondary), #1e9600);
+    color: white;
+}
+
+.register-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 
+        0 8px 25px rgba(32, 178, 170, 0.4),
+        0 0 15px rgba(32, 178, 170, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .card h1 {
+        font-size: 2rem;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Floating Animation for Extra Elements */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Glow Effect */
+.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+    }
 }
