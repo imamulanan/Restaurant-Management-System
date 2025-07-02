@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Place Your Order</h2>
+        <form action="place_order_staff.php" method="post">
+            <label for="customer_name">Customer Name:</label>
+            <input type="text" id="customer_name" name="customer_name" required>
+
+            <label for="dish_name">Dish Name:</label>
+            <input type="text" id="dish_name" name="dish_name" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <input type="submit" value="Place Order">
+        </form>
+
+        <!-- Back to Dashboard button -->
+        <a href="dashboard_staff.html" class="back-button">Back to Dashboard</a>
+    </div>
+</body>
+</html>
