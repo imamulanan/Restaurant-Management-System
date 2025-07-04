@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- <meta charset="UTF-8"> দিয়ে ওয়েবপেজের টেক্সটের এনকোডিং সেট করা হয়, যাতে সব ধরনের ভাষার অক্ষর সঠিকভাবে দেখা যায়। -->
+  <title>Make a Payment</title> <!-- পেজের শিরোনাম -->
+  <link rel="stylesheet" href="payment.css"> <!-- বাইরের CSS ফাইল যুক্ত -->
+</head>
+<body>
+  <div class="payment-container"> <!-- পেমেন্ট ফর্মের মূল কন্টেইনার -->
+    <h2>Make a Payment</h2> <!-- ফর্মের শিরোনাম -->
+    <form action="process_payment_staff.php" method="post"> <!-- ফর্ম সাবমিটের ঠিকানা ও পদ্ধতি -->
+      
+      <label for="username">Username</label> <!-- ইউজারনেম ইনপুটের লেবেল -->
+      <input type="text" id="username" name="username" required> <!-- ইউজারনেম ইনপুট ফিল্ড -->
+
+      <label for="phone">Phone Number</label> <!-- ফোন নম্বরের লেবেল -->
+      <input type="text" id="phone" name="phone" required> <!-- ফোন নম্বর ইনপুট -->
+
+      <label for="amount">Amount</label> <!-- পরিমাণের লেবেল -->
+      <input type="number" id="amount" name="amount" step="0.01" required> <!-- পরিমাণ ইনপুট, দশমিক সহ -->
+
+      <label for="payment_method">Payment Method</label> <!-- পেমেন্ট মেথডের লেবেল -->
+      <select id="payment_method" name="payment_method" required> <!-- পেমেন্ট মেথড নির্বাচন -->
+        <option value="">--Select Method--</option> <!-- ডিফল্ট অপশন -->
+        <option value="Cash">Cash</option> <!-- ক্যাশ অপশন -->
+        <option value="Card">Card</option> <!-- কার্ড অপশন -->
+        <option value="Mobile Banking">Mobile Banking</option> <!-- মোবাইল ব্যাংকিং অপশন -->
+      </select>
+
+      <input type="submit" value="Submit Payment"> <!-- সাবমিট বাটন -->
+    </form>
+  </div>
+</body>
+</html>
