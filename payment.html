@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- HTML ডকুমেন্ট শুরু এবং ভাষা ইংরেজি নির্ধারণ -->
+<head>
+  <meta charset="UTF-8"> <!-- ক্যারেকটার এনকোডিং UTF-8 সেট করা -->
+  <title>Make a Payment</title> <!-- ব্রাউজারের ট্যাবে দেখানো টাইটেল -->
+  <link rel="stylesheet" href="payment.css"> <!-- বাইরের CSS ফাইল সংযুক্ত করা -->
+</head>
+<body> <!-- বডি ট্যাগ যেখানে সব দৃশ্যমান কন্টেন্ট থাকে -->
+
+  <div class="payment-container"> <!-- একটি ডিভ যেটি পেমেন্ট ফর্মের কন্টেইনার -->
+    <h2>Make a Payment</h2> <!-- শিরোনাম দেখায়: Make a Payment -->
+
+    <!-- ফর্ম শুরু, যেটি "process_payment.php" ফাইলে POST রিকোয়েস্ট পাঠাবে -->
+    <form action="process_payment.php" method="post">
+      
+      <!-- ইউজারনেম ইনপুট -->
+      <label for="username">Username</label> <!-- ইউজারনেমের লেবেল -->
+      <input type="text" id="username" name="username" required> <!-- ইউজারনেম ইনপুট ফিল্ড, অবশ্যই পূরণ করতে হবে -->
+
+      <!-- ফোন নাম্বার ইনপুট -->
+      <label for="phone">Phone Number</label> <!-- ফোন নাম্বারের লেবেল -->
+      <input type="text" id="phone" name="phone" required> <!-- ফোন ইনপুট ফিল্ড -->
+
+      <!-- অর্থের পরিমাণ ইনপুট -->
+      <label for="amount">Amount</label> <!-- পরিশোধের পরিমাণ লেবেল -->
+      <input type="number" id="amount" name="amount" step="0.01" required> <!-- সংখ্যা ইনপুট, দশমিক সহ -->
+
+      <!-- পেমেন্ট মেথড নির্বাচন -->
+      <label for="payment_method">Payment Method</label> <!-- পেমেন্ট মেথডের লেবেল -->
+      <select id="payment_method" name="payment_method" required> <!-- ড্রপডাউন ফিল্ড -->
+        <option value="">--Select Method--</option> <!-- ডিফল্ট অপশন -->
+        <option value="Cash">Cash</option> <!-- নগদ -->
+        <option value="Card">Card</option> <!-- কার্ড -->
+        <option value="Mobile Banking">Mobile Banking</option> <!-- মোবাইল ব্যাংকিং -->
+      </select>
+
+      <!-- সাবমিট বাটন -->
+      <input type="submit" value="Submit Payment"> <!-- ফর্ম সাবমিট করার বাটন -->
+
+    </form>
+  </div>
+</body>
+</html>
