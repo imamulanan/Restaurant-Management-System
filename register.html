@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /> <!-- ক্যারেক্টার এনকোডিং সেট করা হয়েছে যেন সব ভাষা ঠিকমতো দেখায় -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- রেসপনসিভ ডিজাইন নিশ্চিত করার জন্য -->
+  <title>Register Page</title> <!-- ব্রাউজারের ট্যাবে প্রদর্শিত টাইটেল -->
+  <link rel="stylesheet" href="register.css"> <!-- এক্সটার্নাল CSS ফাইল যুক্ত করা হয়েছে -->
+</head>
+<body>
+
+  <!-- রেজিস্ট্রেশন ফর্মের জন্য কন্টেইনার ডিভ -->
+  <div class="register-container">
+    <h2>Register</h2> <!-- রেজিস্টার ফর্মের হেডিং -->
+    
+    <!-- ফর্ম সাবমিট হলে register.php ফাইলে পাঠানো হবে -->
+    <form action="register.php" method="post">
+
+      <!-- ফুল নাম ইনপুট -->
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required /> <!-- অবশ্যই পূরণ করতে হবে -->
+
+      <!-- ইউজারনেম ইনপুট -->
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required />
+
+      <!-- ইমেইল ইনপুট -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <!-- পাসওয়ার্ড ইনপুট -->
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <!-- কনফার্ম পাসওয়ার্ড ইনপুট -->
+      <label for="confirm_password">Confirm Password</label>
+      <input type="password" id="confirm_password" name="confirm_password" required />
+
+      <!-- রোল সিলেক্ট করার অপশন -->
+      <label for="role">Register As</label>
+      <select id="role" name="role" required>
+        <option value="">-- Select Role --</option> <!-- ডিফল্ট খালি অপশন -->
+        <option value="admin">Admin</option> <!-- অ্যাডমিন হিসেবে রেজিস্টার -->
+        <option value="staff">Staff</option> <!-- স্টাফ হিসেবে রেজিস্টার -->
+      </select>
+
+      <!-- রেজিস্টার সাবমিট বাটন -->
+      <input type="submit" value="Register" />
+    </form>
+    <div class="links">
+      <p><a href="index.html">Already have an account? Login here</a></p>
+    </div>
+
+  </div> <!-- .register-container শেষ -->
+
+</body>
+</html>
