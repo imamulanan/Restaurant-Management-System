@@ -1,0 +1,84 @@
+/* পুরো বডির জন্য স্টাইল */
+body {
+  font-family: Arial, sans-serif;  /* ফন্ট হিসেবে Arial এবং যদি না থাকে তাহলে স্যান্স-সেরিফ ফন্ট */
+  margin: 0;                      /* পেজের চারপাশের ডিফল্ট মার্জিন দূর করা */
+  height: 100vh;                  /* ভিউপোর্টের সম্পূর্ণ উচ্চতা দখল করবে */
+  display: flex;                  /* ফ্লেক্সবক্স ব্যবহার করে কন্টেন্ট সেন্টার করা */
+  justify-content: center;        /* অনুভূমিকভাবে কেন্দ্র করে */
+  align-items: center;            /* উলম্বভাবে কেন্দ্র করে */
+  background: url('img_06.jpg') no-repeat center center fixed; /* ব্যাকগ্রাউন্ডে ছবি বসানো, পুনরাবৃত্তি নয়, কেন্দ্রে স্থির থাকবে */
+  background-size: cover;         /* ব্যাকগ্রাউন্ড ছবি পুরো এলাকা ঢেকে যাবে */
+}
+
+/* রেজিস্ট্রেশন ফর্মের বক্সের স্টাইল */
+.register-container {
+  background-color: rgba(0, 0, 0, 0.6); /* কালো আংশিক স্বচ্ছ পটভূমি */
+  color: #fff;                          /* ফন্টের রঙ সাদা */
+  padding: 30px 25px;                   /* ভিতরের প্যাডিং */
+  border-radius: 8px;                   /* কোণগুলো গোল করে দেয়া */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* হালকা ছায়া */
+  width: 400px;                        /* প্রস্থ ৪০০ পিক্সেল */
+}
+
+/* হেডার h2 ট্যাগের স্টাইল */
+h2 {
+  text-align: center;                 /* লেখা কেন্দ্রে */
+  margin-bottom: 25px;                /* নিচে ফাঁকা জায়গা */
+  color: #fff;                       /* সাদা রঙ */
+}
+
+/* লেবেলের জন্য স্টাইল */
+label {
+  display: block;                    /* ব্লক এলিমেন্ট হিসেবে */
+  margin-bottom: 8px;                /* নিচে জায়গা */
+  font-weight: bold;                 /* ফন্ট মোটা */
+  color: #eee;                      /* হালকা সাদা রঙ */
+  text-align: left;                 /* লেখা বাঁ দিকে */
+}
+
+/* ইনপুট ফিল্ড ও সিলেক্ট বক্সের স্টাইল */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+  width: 100%;                     /* পুরো প্রস্থ নেবে */
+  padding: 10px;                   /* ভিতরে প্যাডিং */
+  margin-bottom: 18px;             /* নিচে ফাঁকা জায়গা */
+  border: none;                   /* বর্ডার থাকবে না */
+  border-radius: 4px;             /* কোণগুলো একটু গোলাকার */
+  box-sizing: border-box;          /* প্যাডিং ও বর্ডারকে প্রস্থের মধ্যে গণনা করবে */
+}
+
+/* সাবমিট বাটনের স্টাইল */
+input[type="submit"] {
+  width: 100%;                     /* পুরো প্রস্থ */
+  padding: 12px;                   /* প্যাডিং */
+  background-color: #28a745;       /* সবুজ রঙের ব্যাকগ্রাউন্ড */
+  color: white;                    /* ফন্ট সাদা */
+  border: none;                   /* কোন বর্ডার নেই */
+  border-radius: 4px;             /* একটু গোলাকার কোণ */
+  cursor: pointer;                 /* মাউস কার্সর হাতের আকারে পরিবর্তন */
+  transition: background-color 0.3s ease; /* ব্যাকগ্রাউন্ড রঙ পরিবর্তনের জন্য হালকা অ্যানিমেশন */
+}
+
+/* সাবমিট বাটনে হোভার এফেক্ট */
+input[type="submit"]:hover {
+  background-color: #218838;       /* হোভার করলে গাঢ় সবুজ রঙ হবে */
+}
+
+/* নিচের লিঙ্কের অংশের স্টাইল */
+.links {
+  text-align: center;              /* কেন্দ্র করে লেখা */
+  margin-top: 15px;                /* উপরে ফাঁকা জায়গা */
+}
+
+/* লিঙ্কের স্টাইল */
+.links a {
+  color: #fff;                    /* সাদা রঙ */
+  text-decoration: underline;    /* নিচে আন্ডারলাইন থাকবে */
+}
+
+/* লিঙ্কের হোভার স্টাইল */
+.links a:hover {
+  color: #ccc;                   /* হোভার করলে হালকা ধূসর রঙ */
+}
