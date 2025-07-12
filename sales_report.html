@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /> <!-- ক্যারেক্টার সেট -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- মোবাইল রেসপনসিভ সেটিং -->
+  <title>Sales Report - Restaurant Management System</title> <!-- পেজ টাইটেল -->
+  <link rel="stylesheet" href="sales_report.css" /> <!-- বাইরের CSS ফাইল যুক্ত -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Restaurant Management System</h1> <!-- হেডারের প্রধান শিরোনাম -->
+  </header>
+
+  <nav>
+    <!-- ন্যাভিগেশন লিংকসমূহ -->
+    <a href="dashboard.html">Dashboard</a>
+    <a href="order.html">Place Order</a>
+    <a href="view_orders.php">Orders</a>
+    <a href="menu_list.php">Menu Management</a>
+    <a href="sales_report.html">Sales Report</a>
+    <a href="manage_users.php">User Management</a>
+    <a href="feedback.php">Feedback</a>
+    <a href="logout.php">Logout</a>
+  </nav>
+
+  <div class="container"> <!-- মূল কন্টেইনার -->
+    <h2>Sales Report</h2> <!-- সেলস রিপোর্ট শিরোনাম -->
+
+    <!-- Summary Cards -->
+    <div class="summary"> <!-- সারাংশের কার্ডের জন্য ডিভ -->
+      <div class="card"> <!-- কার্ড: টোটাল সেলস -->
+        <h3>Total Sales</h3>
+        <p>12,500Tk</p>
+      </div>
+      <div class="card"> <!-- কার্ড: আজকের সেলস -->
+        <h3>Today's Sales</h3>
+        <p>1,250Tk</p>
+      </div>
+      <div class="card"> <!-- কার্ড: এই সপ্তাহের সেলস -->
+        <h3>This Week</h3>
+        <p>5,300Tk</p>
+      </div>
+      <div class="card"> <!-- কার্ড: এই মাসের সেলস -->
+        <h3>This Month</h3>
+        <p>12,500Tk</p>
+      </div>
+    </div>
+
+    <!-- Sales Data Table -->
+    <table> <!-- সেলস ডেটার টেবিল -->
+      <tr>
+        <th>Date</th> <!-- তারিখের হেডার -->
+        <th>Total Orders</th> <!-- মোট অর্ডারের হেডার -->
+        <th>Total Sales (Tk)</th> <!-- মোট সেলসের হেডার -->
+      </tr>
+      <!-- টেবিলের রো: প্রতিদিনের ডাটা -->
+      <tr>
+        <td>2024-03-01</td>
+        <td>25</td>
+        <td>1,250Tk</td>
+      </tr>
+      <tr>
+        <td>2024-03-02</td>
+        <td>30</td>
+        <td>1,500Tk</td>
+      </tr>
+      <tr>
+        <td>2024-03-03</td>
+        <td>20</td>
+        <td>950Tk</td>
+      </tr>
+      <tr>
+        <td>2024-03-04</td>
+        <td>40</td>
+        <td>2,000Tk</td>
+      </tr>
+      <tr>
+        <td>2024-03-05</td>
+        <td>35</td>
+        <td>1,750Tk</td>
+      </tr>
+    </table>
+
+    <!-- Basic Bar Chart -->
+    <div class="chart-container"> <!-- চার্টের জন্য কন্টেইনার -->
+      <h3 style="text-align:center;">Sales This Week</h3> <!-- চার্ট শিরোনাম -->
+
+      <div class="bar-chart"> <!-- বার চার্টের বারসমূহ -->
+        <div class="bar" style="height: 50%;">Tk1.2k</div> <!-- বার ১ -->
+        <div class="bar" style="height: 60%;">Tk1.5k</div> <!-- বার ২ -->
+        <div class="bar" style="height: 40%;">Tk950</div> <!-- বার ৩ -->
+        <div class="bar" style="height: 80%;">Tk2k</div> <!-- বার ৪ -->
+        <div class="bar" style="height: 70%;">Tk1.75k</div> <!-- বার ৫ -->
+      </div>
+
+      <div class="bar-chart"> <!-- বার লেবেলসমূহ -->
+        <div class="bar-label">03/01</div> <!-- তারিখ লেবেল -->
+        <div class="bar-label">03/02</div>
+        <div class="bar-label">03/03</div>
+        <div class="bar-label">03/04</div>
+        <div class="bar-label">03/05</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Restaurant Management System. All rights reserved. <!-- ফুটার -->
+  </footer>
+
+</body>
+</html>
