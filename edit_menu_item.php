@@ -6,7 +6,7 @@ $password = "";
 $dbname = "restaurant_management";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-// যদি কানেকশনে কোনো ত্রুটি থাকে তাহলে স্ক্রিপ্ট বন্ধ করে ত্রুটি দেখাও
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
